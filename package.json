@@ -1,0 +1,14 @@
+{
+  "name": "inventory-billing-system",
+  "version": "1.0.0",
+  "description": "Full-stack inventory and billing management system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  }
+}

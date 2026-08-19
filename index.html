@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory & Billing System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Inventory & Billing System</h1>
+      <p>Product and stock management dashboard</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats">
+      <div class="card"><span>Total Products</span><strong id="totalProducts">0</strong></div>
+      <div class="card"><span>Total Stock</span><strong id="totalStock">0</strong></div>
+      <div class="card"><span>Inventory Value</span><strong id="inventoryValue">₹0</strong></div>
+    </section>
+
+    <section class="panel">
+      <h2>Add Product</h2>
+      <form id="productForm">
+        <input id="name" placeholder="Product name" required>
+        <input id="category" placeholder="Category">
+        <input id="price" type="number" min="0" step="0.01" placeholder="Price" required>
+        <input id="stock" type="number" min="0" placeholder="Stock" required>
+        <button type="submit">Add Product</button>
+      </form>
+      <p id="message"></p>
+    </section>
+
+    <section class="panel">
+      <div class="toolbar">
+        <h2>Products</h2>
+        <input id="search" placeholder="Search products...">
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Action</th></tr></thead>
+          <tbody id="productTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
